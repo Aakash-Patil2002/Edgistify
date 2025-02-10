@@ -1,0 +1,53 @@
+.pageBody{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doneImg{
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    animation: zoomming 0.3s;
+}
+@keyframes zoomming{
+    0%{
+        transform: scale(0)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+.viewOrder, .continueShoping{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.viewOrder{
+    border: 2px solid #222;
+    color: #222;
+}
+
+.continueShoping{
+    background-color: #FFA500;
+    color: #fff;
+}
+.thanksState{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.innerBody{
+    max-width: 450px;
+}

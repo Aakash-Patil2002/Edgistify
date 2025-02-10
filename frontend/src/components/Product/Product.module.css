@@ -1,0 +1,51 @@
+:root{
+    --green:#47BB8E;
+    --green2:#EFFCF8;
+}
+.cart_body{
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #c9c8c8;
+}
+.cartImg{
+    width: 100%;
+    border-radius: 5px;
+}
+.CourseName{
+    color: var(--green);
+    font-size: 16px;
+    font-weight: 500;
+}
+.CourseTitle{
+   color: #111;
+   font-size: 17px;
+   font-weight: 700; 
+}
+
+.Author{
+    font-size: 15px;
+    border: 1px solid #111;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.Author span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.stock{
+    color: #f0c257;
+    margin-left: 10px;
+}
+.add_cart{
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    height: 40px;
+    border: none;
+    transition: .3s;
+}
+.add_cart:hover{
+    background-color: #333;
+}

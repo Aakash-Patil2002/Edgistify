@@ -1,0 +1,49 @@
+.myOrder {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.order {
+    border: 2px solid #111;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.prodImg{
+    width: 40px;
+}
+.orderItems{
+    font-size: 18px;
+    font-weight: 700;
+}
+.productList {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.productItem {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+.total{
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.addDetails p{
+    margin-bottom: 0;
+}
+.emptyOrder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    font-size: 22px;
+    font-weight: 600;
+    
+    width: 100%;
+    color: #7d7a7a;
+}
