@@ -9,24 +9,96 @@
 		{
 			"name": "Login",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jayesh@gmail.com\",\r\n    \"password\":\"Jayesh@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "signup",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Jayesh Patil\",\r\n    \"email\":\"jayesh@gmail.com\",\r\n    \"password\":\"Jayesh@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "addtocart",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTkwNzI2ZDY2ZDM4ODkwZGJlZmY3MiIsImlhdCI6MTczOTEzMDY2OCwiZXhwIjoxNzQxNzIyNjY4fQ.-EkwpTgFGw89QFaS7LBr6tIX7eTF5Y2DxNQaz29ot2A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prodId\":\"67a73217d996a4ad340d8190\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/cart/addtocart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cart",
+						"addtocart"
+					]
+				}
 			},
 			"response": []
 		},
@@ -34,31 +106,139 @@
 			"name": "cartProduct",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTkwNzI2ZDY2ZDM4ODkwZGJlZmY3MiIsImlhdCI6MTczOTEzMDY2OCwiZXhwIjoxNzQxNzIyNjY4fQ.-EkwpTgFGw89QFaS7LBr6tIX7eTF5Y2DxNQaz29ot2A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5001/api/cart/getcart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cart",
+						"getcart"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "productQuantity",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTkwNzI2ZDY2ZDM4ODkwZGJlZmY3MiIsImlhdCI6MTczOTEzMDY2OCwiZXhwIjoxNzQxNzIyNjY4fQ.-EkwpTgFGw89QFaS7LBr6tIX7eTF5Y2DxNQaz29ot2A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qty\":\"3\",\r\n    \"prodId\":\"67a73217d996a4ad340d8190\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/cart/quantity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cart",
+						"quantity"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "removeFromCart",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTkwNzI2ZDY2ZDM4ODkwZGJlZmY3MiIsImlhdCI6MTczOTEzMDY2OCwiZXhwIjoxNzQxNzIyNjY4fQ.-EkwpTgFGw89QFaS7LBr6tIX7eTF5Y2DxNQaz29ot2A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5001/api/cart/removetocart/67a73217d996a4ad340d8190",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"cart",
+						"removetocart",
+						"67a73217d996a4ad340d8190"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "placeorder",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTkwNzI2ZDY2ZDM4ODkwZGJlZmY3MiIsImlhdCI6MTczOTEzMDY2OCwiZXhwIjoxNzQxNzIyNjY4fQ.-EkwpTgFGw89QFaS7LBr6tIX7eTF5Y2DxNQaz29ot2A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Jayesh Patil\",\r\n  \"email\": \"Jayesh@gmail.com\",\r\n  \"phone\": \"345678987\",\r\n  \"address\": \"Rajendra nagar, Pune, Maharashtra, 411001\",\r\n  \"products\": [\r\n    {\r\n      \"productId\": \"67a73217d996a4ad340d8190\",\r\n      \"productImage\": \"http://localhost:5001/uploads/iphone13.jpg\",\r\n      \"productName\": \"Apple iPhone 13\",\r\n      \"productPrice\": 69999,\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"totalPrice\": 70058\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"order"
+					]
+				}
 			},
 			"response": []
 		},
@@ -66,7 +246,25 @@
 			"name": "MyOrders",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTkwNzI2ZDY2ZDM4ODkwZGJlZmY3MiIsImlhdCI6MTczOTEzMDY2OCwiZXhwIjoxNzQxNzIyNjY4fQ.-EkwpTgFGw89QFaS7LBr6tIX7eTF5Y2DxNQaz29ot2A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5001/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"order"
+					]
+				}
 			},
 			"response": []
 		},
